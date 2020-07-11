@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_exemplos/exemplos/exemplo_01.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -35,7 +36,14 @@ class _DashboardState extends State<Dashboard> {
       child: Container(
         decoration: BoxDecoration(color: Color.fromRGBO(220, 220, 220, 1.0)),
         child: new InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Exemplo01(),
+              ),
+            );
+          },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisSize: MainAxisSize.min,
